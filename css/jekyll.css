@@ -1,3 +1,18 @@
+@media screen and (min-width: 914px) {
+    .container {
+        width: 714px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+
 body {
   margin: 0;
   padding: 30px 0px 30px 0px;
@@ -248,17 +263,3 @@ a {
   zoom:1;
 }
 
-@media screen and (min-width: 914px) {
-    .container {
-        width: 714px !important;
-        margin:0 auto;
-    }
-}
-@media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
-}
