@@ -250,7 +250,7 @@ a {
 
 @media screen and (min-width: 914px) {
     .container {
-        width: 714px;
+        width: 714px !important;
         margin:0 auto;
     }
 }
