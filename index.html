@@ -12,7 +12,7 @@ title: Machine Learning Notes
 	{% for cat in site.categories %}
 		<li>{{cat | first}} - {{cat | last | size}}
 			<ul>
-				{% for post in cat.list %}
+				{% for post in cat.last %}
     				<li>{{post.date | date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}} </a></li>
 				{% endfor %}
 			</ul>
