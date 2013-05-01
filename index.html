@@ -8,16 +8,14 @@ title: Machine Learning Notes
 </p>
 
 <h2>Posts</h2>
-<ul>
-	{% for cat in site.categories %}
-		<li>{{cat | first}} - {{cat | last | size}}
-			<ul>
-				{% for post in cat.last %}
-    				<li>{{post.date | date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}} </a></li>
-				{% endfor %}
-			</ul>
-		</li>
+{% for cat in site.categories %}
+	<h3>{{cat | first}} - {{cat | last | size}}</h3>
+	<ul>
+	{% for post in cat.last %}
+    	<li>{{post.date | date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}} </a></li>
 	{% endfor %}
+	</ul>
+{% endfor %}
 </ul>
 
 <ul>
