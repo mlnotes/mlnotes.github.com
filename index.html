@@ -9,7 +9,7 @@ title: Machine Learning Notes
 
 <h2>Posts</h2>
 {% for cat in site.categories %}
-	<h3>{{cat | first}} - {{cat | last | size}}</h3>
+	<b>{{cat | first}} ({{cat | last | size}})</b>
 	<ul>
 	{% for post in cat.last %}
     	<li>{{post.date | date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}} </a></li>
