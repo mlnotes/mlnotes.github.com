@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 数学简史
-categories: [Math]
+tags: [Math]
 ---
 
 **To Be Continued**
