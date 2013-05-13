@@ -18,8 +18,13 @@ title: Machine Learning Notes
 {% endfor %}
 
 <h2>Tags</h2>
-{% for tag in site.tags %}
-	<b>{{site.tags[tag]}}</b>
+{% for cat in site.tags %}
+	<b>{{cat | first}} ({{cat | last | size}})</b>
+	<ul>
+	{% for post in cat.last %}
+		<li>{{post.date | date_to_string}} <a href="{{site.baseurl}}{{post.url}}">{{post.title}} </a></li>
+	{% endfor %}
+	</ul>
 {% endfor %}
 
 
