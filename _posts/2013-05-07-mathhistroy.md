@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 数学简史
+title: Brief History of Math
 tags: [Math]
 ---
 
