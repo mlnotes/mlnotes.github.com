@@ -41,3 +41,19 @@ $$$ x_e \ge 0 $$$</p></blockquote>
 <strong>s.t.</strong><br/>
 $$$ \sum_{(u,v) \in E} y_u + y_ v \ge 1 $$$<br/>
 $$$ y_v \ge 0 $$$</p></blockquote>
+
+<p>We can easily rewrite the above two linear programming problems into primary-dual format. First, we can define a matrix A, where A is a |V| $$$ \\times $$$ |E| matrix, $$$ A_{ij} = 1 $$$ if verteix i is an end point of edge j, otherwise, $$$ A_{ij} = 0 $$$. Then the maximum matching can be defined as:</p>
+
+<blockquote><p>$$$ max 1^T X $$$<br/>
+<strong>s.t.</strong><br/>
+$$$ AX \\le 1 $$$<br/>
+$$$ X \\ge 0 $$$</p></blockquote>
+
+<p>And the minimum vertex cover can be defined as:</p>
+
+<blockquote><p>$$$ min Y 1^T $$$<br/>
+<strong>s.t.</strong><br/>
+$$$ Y^T A \\ge 1 $$$<br/>
+$$$ Y \\ge 0 $$$</p></blockquote>
+
+<p>Due to the primary-dual property of linear programming, we can certainly say that <code>Konig's theorem</code> gets proved.</p>
