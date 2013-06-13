@@ -65,15 +65,4 @@ string longestPalindrome(string s)
 	return s.substr((maxi-maxlen+1)/2, maxlen-1);
 }
 
-
-int main()
-{
-	string s;
-	while(true)
-	{
-		cin >> s;
-		cout << longestPalindrome(s) << '\n';
-	}
-}
-
 ```
