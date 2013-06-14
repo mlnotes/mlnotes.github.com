@@ -4,7 +4,7 @@ title: Longest Palindromic Substring
 tags: [leetcode]
 ---
 
-# Manacher's Algorithm
+## Manacher's Algorithm
 
 
 ```
