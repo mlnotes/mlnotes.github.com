@@ -8,11 +8,6 @@ tags: [leetcode]
 
 
 ```
-#include <string>
-#include <iostream>
-using namespace std;
-
-
 string longestPalindrome(string s)
 {
     // Start typing your C/C++ solution below
