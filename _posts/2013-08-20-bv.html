@@ -1,0 +1,28 @@
+---
+layout: default
+title: Bias and Variance Tradeoff
+tags: [Machine Learning]
+---
+
+
+<h1>Bias</h1>
+
+<h1>Variance</h1>
+
+<h1>Relationship between Bias and Variance</h1>
+
+<p>
+在机器中，我们经常使用最小平方差来评估模型的好坏，一般而言，最小平方差越小则模型越好。而最小平方差实际上是由bias和variance两部分组成的，且这两部分不能被同时缩小。所以为了使得最小平方差最小，我们需要在bias和variance之间做一些tradeoff。
+</p>
+
+<p>
+假设我们用来训练的数据集为 $$$D=\{(x_1,t_1),(x_2,t_2),.....,(x_N,t_N)\}$$$，数据的真实关系为 $$$t = f(x) + \epsilon$$$, 且 $$$E(\epsilon)=0$$$, $$$\epsilon$$$可以看做是观测值的噪声，通常是一个均值为0的正太分布。同时假设我们的拟合模型为$$$y = g(x,w)$$$。那么在这个数据集上，我们可以定义最小平方差为 $$$MSE = \frac{1}{N}\sum_i^N\{(t_i - y_i)^2\}$$$，那么最小平方差的均值就为 $$$E(MSE) = \frac{1}{N}\sum_i^N E\{(t_i-y_i)^2\}$$$。接下来我们主要的工作就是对$$$E\{(t_i-y_i)^2\}$$$进行化简，将其转换成bias和variance的形式。
+</p>
+
+$$ \begin{eqnarray*}
+
+	E\{(t_i - y_i)^2\} &=& E\{(t_i - f_i + f_i - y_i)^2 \} \\
+					   &=& E\{(t_i-f_i)^2\} + E\{(f_i-y_i)^2\} + 2E\{(t_i-f_i)(f_i-y_i)\} \\ 
+					   &=& E(\epsilon^2) + E\{(f_i-y_i)^2\} + 2\{E(t_if_i)-E(t_iy_i) - E(f_i^2) + E(f_iy_i)\}
+
+\end{eqnarray*} $$
