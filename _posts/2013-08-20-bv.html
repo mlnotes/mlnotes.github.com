@@ -26,3 +26,14 @@ $$ \begin{eqnarray*}
 					   &=& E(\epsilon^2) + E\{(f_i-y_i)^2\} + 2\{E(t_if_i)-E(t_iy_i) - E(f_i^2) + E(f_iy_i)\}
 
 \end{eqnarray*} $$
+
+<p>
+因为$$$f_i$$$是一个常数，因此$$$E(t_if_i) = f_iE(t_i) = f_iE(f_i + \epsilon) = f_i^2$$$ ,同样的，我们有$$$E(f_i^2) = f_i^2$$$ ；又因为$$$t_i = f_i+\epsilon$$$， 有$$$E(t_iy_i) = E(f_iy_i+\epsilon y_i)$$$ ，而$$$y_i$$$ 和 $$$\epsilon$$$是相互独立的，因此$$$E(\epsilon y_i) = 0$$$，得到$$$E(t_iy_i) = E(f_iy_i)$$$，整理之后得到下面的等式。
+</p>
+
+$$ \begin{eqnarray*}
+
+	E\{(t_i - y_i)^2\} &=& E(\epsilon^2) + E\{(f_i-y_i)^2\} + 2\{f_i^2-E(f_iy_i) - f_i^2 + E(f_iy_i)\} \\
+					   &=& Var(niose) + E\{(f_i-y_i)^2\}
+
+\end{eqnarray*} $$
