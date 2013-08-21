@@ -1,8 +1,8 @@
 ---
-title: links
+title: Links
 layout: page
 comments: yes
 ---
 
-暂无
+[个人博客](http://blog.csdn.net/mlnotes)
 
