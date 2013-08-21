@@ -17,6 +17,7 @@ comments: no
 Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
 CSDN: [mlnotes](http://blog.csdn.net/mlnotes)   
 GitHub: [BitHigher](https://github.com/bithigher)        
+Stackoverflow: [hanfeng](http://stackoverflow.com/users/2667591/hanfeng)  
 
 ----
 
