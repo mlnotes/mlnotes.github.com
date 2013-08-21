@@ -4,4 +4,4 @@ layout: page
 comments: no
 ---
 
-个人博客: [CSDN](http://blog.csdn.net/mlnotes)
+[CSDN Blog](http://blog.csdn.net/mlnotes)
