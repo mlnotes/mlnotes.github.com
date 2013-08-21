@@ -13,9 +13,9 @@ comments: no
 
 ###联系方式：        
 
-个人邮箱: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
-resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
-github : [BitHigher](https://github.com/bithigher)        
+Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
+Resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
+GitHub : [BitHigher](https://github.com/bithigher)        
 
 ----
 
