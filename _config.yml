@@ -1,9 +1,9 @@
-name: Solar Theme
-url: http://example.org
-description: A stylish blog using the Solarized color palette
-
+markdown: rdiscount
 permalink: /:year/:month/:day/:title/
-paginate: 10
+url: http://webfrogs.github.com
+author: webfrogs
 pygments: true
+safe: true
+paginate: 16
+auto: true
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']

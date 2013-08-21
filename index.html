@@ -1,49 +1,53 @@
 ---
-layout: default
-title: Solar Theme
+title: webfrogs' Homepage
+layout: page
 ---
 
+<ul class="listing">
 {% for post in paginator.posts %}
-
-	<article class="post">
-
-		{% if post.external-url %}
-			<h1>
-				<a href="{{ post.external-url }}">{{ post.title }}</a>
-				<a class="anchor" href="{{ post.url }}"><i class="icon-anchor"></i></a>
-			</h1>
-		{% else %}
-			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-		{% endif %}
-
-		<div class="post-content">{{ post.content }}</div>
-
-	</article>
-
+  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+  {% if year != y %}
+    {% assign year = y %}
+    <li class="listing-seperator">{{ y }}</li>
+  {% endif %}
+  <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
 {% endfor %}
+</ul>
 
+<div id="post-pagination" class="paginator">
 
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <a href="/"><前页</a>
+    {% else %}
+    <a href="/page{{paginator.previous_page}}"><前页</a>
+    {% endif %}
+  {% else %}
+    <span class="previous disabled"><前页</span>
+  {% endif %}
 
-{% if paginator.total_pages > 1 %}
-	<div class="postnavigation">
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
 
-		{% if paginator.previous_page %}
-			{% if paginator.page == 2 %}
-				<a class="prev left" href="/">&larr; Newer</a>
-			{% else %}
-				<a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
-			{% endif %}
-		{% else %}
-			<span class="nope left">&larr; Newer</span>
-		{% endif %}
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/page{{count}}">{{count}}</a>
+      {% endif %}
+    {% endfor %}
 
-		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a class="next" href="/page{{paginator.next_page}}">后页></a>
+  {% else %}
+    <span class="next disabled" >后页></span>
+  {% endif %}
+  (共{{ paginator.total_posts }}篇)
+</div>
 
-		{% if paginator.next_page %}
-			<a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
-		{% else %}
-			<span class="nope right">Older &rarr;</span>
-		{% endif %}
-
-	</div>
-{% endif %}
