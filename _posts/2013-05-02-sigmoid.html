@@ -23,8 +23,7 @@ tags: [Machine Learning]
 <p>Sigmoid CPD(<em>Conditional Probability Distribution</em>) is an variant of linear CPD, it just applies a sigmoid function on the linear result. And the parameters in Sigmoid CPD are just the weights in the linear relationship. For distribution $$$P(y_1 \mid X_1, X_2,…, X_n)$$$ , the linear CPD is</p>
 <p>$$ P_L(y_1 \mid X_1, X_2, …, X_n) = w_0 + \sum_i^n w_i X_i $$ where $$$w_i$$$ is the weight of each variable, and $$$w_0$$$ is the bias.</p>
 
-<p>so the sigmoid CPD is</p>
-<p>$$ P_S(y_1 \mid X_1, X_2, … X_n) = \frac {1}{1+e^{-P_L(X_1, X_2, …, X_n)}}$$</p>
+<p>so the sigmoid CPD is $$ P_S(y_1 \mid X_1, X_2, … X_n) = \frac {1}{1+e^{-P_L(X_1, X_2, …, X_n)}}$$</p>
 
 <p>Compared with traditional CPD, whose number of parameters is proportional to $$$ \prod_i^n d_i $$$ ($$$n$$$ is the number of variables and $$$d_i$$$ is the cardinality of the i-th variable), the number of parameters in Sigmoid CPD is reduced to $$$n$$$.</p>
 
