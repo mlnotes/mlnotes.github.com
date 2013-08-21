@@ -11,7 +11,7 @@ comments: no
 
 ----
 
-###联系方式：        
+###联系方式        
 
 Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
 Resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
