@@ -1,7 +1,7 @@
 ---
 title: Links
 layout: page
-comments: yes
+comments: no
 ---
 
 个人博客: [CSDN](http://blog.csdn.net/mlnotes)
