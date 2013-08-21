@@ -15,7 +15,8 @@ comments: no
 ###联系方式        
 
 Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
-GitHub : [BitHigher](https://github.com/bithigher)        
+GitHub: [BitHigher](https://github.com/bithigher)        
+CSDN: [mlnotes](https://blog.csdn.net/mlnotes)   
 
 ----
 
