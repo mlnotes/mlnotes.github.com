@@ -14,11 +14,9 @@ comments: no
 ###联系方式：        
 
 个人邮箱: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
-新浪微博: [InfoCatcher](http://weibo.com/bithigher)	 
-resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)
+resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
 github : [BitHigher](https://github.com/bithigher)        
 
 ----
 
-
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/1713195262/f78fbcd2/1.png)](http://weibo.com/u/1713195262?s=6uyXnP)
+[![新浪微博](http://service.t.sina.com.cn/widget/qmd/1617060065/fd65f3f9/1.png)](http://weibo.com/u/1617060065?s=6uyXnP)
