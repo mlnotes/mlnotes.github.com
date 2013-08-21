@@ -6,15 +6,15 @@ comments: no
 
 程序猿一枚，目前仍处于学习阶段。	
 热爱编程，热爱机器学习，喜欢linux，github等。		
-喜欢干净整洁的代码，轻微代码洁癖。  	
-微博控
+喜欢干净整洁的代码，轻微代码洁癖。  
+
+简历 : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
 
 ----
 
 ###联系方式        
 
 Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
-Resume : [Hanfeng](http://careers.stackoverflow.com/hanfeng)  
 GitHub : [BitHigher](https://github.com/bithigher)        
 
 ----
