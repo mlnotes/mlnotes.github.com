@@ -42,6 +42,15 @@ layout: default
   {% endfor %}
 </span>
 {% endif %}
+
+{% if page.keywords %}
+<span class="keywords">
+	keywords
+	{% for key in page.keywords %}
+		{{key}}_
+	{% endfor %}
+</span>
+{% endif %}
 </section>
 {% include comments.md %}
 
