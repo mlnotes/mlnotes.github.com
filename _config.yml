@@ -1,9 +1,10 @@
 markdown: rdiscount
 permalink: /:year/:month/:day/:title.html
-url: http://bithigher.github.com
+url: http://mlnotes.com
 author: hanfeng
+email: zhuhanfeng@gmail.com
 pygments: true
 safe: true
 paginate: 16
 auto: true
-
+keywords: [Machine Learning,机器学习,Algorithm,算法,Math,数学]
