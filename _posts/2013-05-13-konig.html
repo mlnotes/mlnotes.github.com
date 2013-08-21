@@ -40,47 +40,56 @@ We can break the proof into two steps. Firstly, we can prove that |C| $$$ \ge $$
 <h2>Proof by Duality</h2>
 
 <p>
-If we convert maximum matching problem and minimum vertex cover problem into `Linear Programming` problems, then we can  prove `Konig's theorem` elegantly by using duality.
+If we convert maximum matching problem and minimum vertex cover problem into <code>Linear Programming</code> problems, then we can  prove <code>Konig's theorem</code> elegantly by using duality.
 </p>
 
 <p>
 Given a bipartite graph $$$ G=(V,E) $$$, the maximum matching can be defined as:
 </p>
 
-> $$$ max \sum_{e \in E} x_e $$$  
-> <strong>s.t.</strong>  
-> $$$ \sum_{e \in \delta(v)} x_e \le 1 $$$  
-> $$$ x_e \ge 0 $$$
+<blockquote><p>
+$$$ max \sum_{e \in E} x_e $$$  <br/>
+<strong>s.t.</strong>  <br/>
+$$$ \sum_{e \in \delta(v)} x_e \le 1 $$$  <br/>
+$$$ x_e \ge 0 $$$ <br/>
+</p></blockquote>
+
 
 <p>
 The minimum vertex cover can be defined as:
 </p>
 
-> $$$ min \sum_{v \in G} y_v $$$  
-> <strong>s.t.</strong>  
-> $$$ \sum_{(u,v) \in E} y_u + y_v \ge 1 $$$  
-> $$$ y_v \ge 0 $$$
+<blockquote><p>
+$$$ min \sum_{v \in G} y_v $$$  <br/>
+<strong>s.t.</strong>  <br/>
+$$$ \sum_{(u,v) \in E} y_u + y_v \ge 1 $$$  <br/>
+$$$ y_v \ge 0 $$$
+</p></blockquote>
 
 <p>
 We can easily rewrite the above two linear programming problems into primary-dual format. First, we can define a matrix A, where A is a |V| $$$ \times $$$ |E| matrix, $$$ A_{ij} = 1 $$$ if verteix i is an end point of edge j, otherwise, $$$ A_{ij} = 0 $$$. Then the maximum matching can be defined as:
 </p>
 
-> $$$ max 1^T X $$$   
-> <strong>s.t.</strong>  
-> $$$ AX \le 1 $$$  
-> $$$ X \ge 0 $$$  
+<blockquote><p>
+$$$ max 1^T X $$$  <br/> 
+<strong>s.t.</strong>  <br/>
+$$$ AX \le 1 $$$  <br/>
+$$$ X \ge 0 $$$  
+</p></blockquote>
 
 <p>
 And the minimum vertex cover can be defined as:
 </p>
 
-> $$$ min Y 1^T $$$  
-> <strong>s.t.</strong>  
-> $$$ Y^T A \ge 1 $$$  
-> $$$ Y \ge 0 $$$  
+<blockquote><p>
+$$$ min Y 1^T $$$  <br/>
+<strong>s.t.</strong>  <br/>
+$$$ Y^T A \ge 1 $$$  <br/>
+$$$ Y \ge 0 $$$  
+</p></blockquote>
 
 <p>
-Due to the primary-dual property of linear programming, we can certainly say that `Konig's theorem` gets proved.
+Due to the primary-dual property of linear programming, we can certainly say that <code>Konig's theorem</code> gets proved.
 </p>
 
 <h2>Proof by Induction</h2>
