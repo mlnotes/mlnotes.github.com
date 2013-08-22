@@ -1,3 +1,5 @@
+name: mlnotes
+description: Machine Learning Notes
 markdown: rdiscount
 permalink: /:year/:month/:day/:title.html
 url: http://mlnotes.com
