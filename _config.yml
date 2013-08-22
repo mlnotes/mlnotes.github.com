@@ -1,7 +1,7 @@
 name: mlnotes
 description: Machine Learning Notes
 markdown: rdiscount
-permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title.html
 url: http://mlnotes.com
 author: hanfeng
 email: zhuhanfeng@gmail.com
