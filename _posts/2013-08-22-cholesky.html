@@ -122,3 +122,73 @@ $$ \begin{eqnarray*}
 </ul>
 
 <h3>为什么正定矩阵可以分成三角矩阵的乘积？</h3>
+<p>
+假设正定矩阵可以分解为两个三角矩阵的乘积。不妨令$$$ A_n = L_n L_n^T $$$，同时分别将$$$A_n$$$ 和 $$$L_n$$$ 写作
+</p>
+
+$$ \begin{eqnarray*}
+	A_n &=& \begin{bmatrix}
+		a_{11} & a_{n1}^T \\
+		a_{n1} & A_{n-1}
+	\end{bmatrix} \\
+
+	L_n &=& \begin{bmatrix}
+		l_{11} & 0 \\
+		l_{n1} & L_{n-1}
+	\end{bmatrix}
+
+\end{eqnarray*} $$
+
+如果我们能证明下面的等式成立，那么我们就证明了正定矩阵可以分成了两个三角矩阵的乘积。
+
+$$\begin{eqnarray*}
+	A_n &=& L_n L_n^T \\
+	\begin{bmatrix}
+		a_{11} & a_{n1}^T \\
+		a_{n1} & A_{n-1}
+	\end{bmatrix} &=&  \begin{bmatrix}
+							l_{11} & 0 \\
+							l_{n1} & L_{n-1}
+						\end{bmatrix}
+						\begin{bmatrix}
+							l_{11} & l_{n1}^T \\
+							0 & L_{n-1}^T
+						\end{bmatrix}
+
+				  &=& \begin{bmatrix}
+						l_{11}^2 & l_{11}l_{n1}^T \\
+						l_{11}l_{n1} & l_{n1}l_{n1}^T + L_{n-1}L_{n-1}^T
+				  	  \end{bmatrix}
+	
+\end{eqnarray*}$$
+
+<p>
+由于$$$A_n$$$是正定矩阵，而正定矩阵对角线上的元素都为正，因而$$$a_{11} > 0 $$$，所以我们得到 
+</p>
+
+$$
+	l_{11} = \sqrt{a_{11}}
+$$
+
+<p>
+因为 $$$ a_{n1} = l_{11}l_{n1} $$$，所以我们可以得到
+</p>
+
+$$
+	l_{n1} = \frac{1}{\sqrt{a_{11}}} a_{n1}
+$$
+
+<p>
+至此，我们只需要证明 $$$ A_{n-1} = l_{n1}l_{n1}^T + L_{n-1}L_{n-1}^T $$$，既可以证明正定矩阵可以分解成三角矩阵的乘积，也就是证明
+</p>
+
+$$\begin{eqnarray*}
+	A_{n-1} - l_{n1}l_{n1}^T &=& L_{n-1}L_{n-1}^T \\
+	A_{n-1} - \frac{1}{a_{11}} &=& L_{n-1}L_{n-1}^T
+\end{eqnarray*}$$
+
+<p>
+观察上面的等式，我们发现，只需要证明 $$$ A_{n-1} - \frac{1}{a_{11}} $$$ 是正定矩阵就可以了。而这个表达式恰好是矩阵$$$A_n$$$的Schur补，根据正定矩阵的性质，我们知道这个表达式也是正定矩阵。接着我们采用归纳证明，假设维度为n-1的正定矩阵可以分解成下三角矩阵和上三角矩阵的乘积，那么根据上面的分析，我们知道维度为n的正定矩阵也可以分解成下三角矩阵和上三角矩阵的乘积；当n=1时，显然可以分解成三角矩阵的乘积。因此我们证明了$$$ A_{n-1} = l_{n1}l_{n1}^T + L_{n-1}L_{n-1}^T$$$，从而也就证明了Cholesky Decomposition。
+</p>
+
+<h2>Cholesky Decompostion在Least Angle Regression 中的运用</h2>
