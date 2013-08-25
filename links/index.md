@@ -10,3 +10,4 @@ comments: no
 [Radial Bais Function Network](http://www.anc.ed.ac.uk/rbf/intro/intro.html)  
 [Applied Numerical Computing](http://www.seas.ucla.edu/~vandenbe/ee103.html)  
 [Apple BLAS Reference](https://developer.apple.com/library/mac/DOCUMENTATION/Accelerate/Reference/BLAS_Ref/Reference/reference.html)
+[EasyIcon Icon Search Engine](http://www.easyicon.cn/) 
