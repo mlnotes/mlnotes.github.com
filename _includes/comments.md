@@ -1,7 +1,7 @@
 <!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
-		var duoshuoQuery = {short_name:"mlnotes"};
+		var duoshuoQuery = {short_name:"{{site.duoshuo}}"};
 		(function() {
 			var ds = document.createElement('script');
 			ds.type = 'text/javascript';ds.async = true;
