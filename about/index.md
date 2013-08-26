@@ -14,7 +14,7 @@ comments: no
 
 ###联系方式        
 
-Email: [zhuhanfeng@gmail.com](mailto:zhuhanfeng@gmail.com)     
+Email: [me@mlnotes.com](mailto:me@mlnotes.com)     
 CSDN: [mlnotes](http://blog.csdn.net/mlnotes)   
 GitHub: [mlnotes](https://github.com/mlnotes)        
 StackOverflow: [hanfeng](http://stackoverflow.com/users/2667591/hanfeng)  
