@@ -1,10 +1,10 @@
 name: mlnotes
 description: Machine Learning Notes
+url: http://mlnotes.com
 markdown: rdiscount
 permalink: /:year/:month/:day/:title.html
-url: http://mlnotes.com
 author: hanfeng
-email: zhuhanfeng@gmail.com
+email: me@mlnotes.com
 pygments: true
 safe: true
 paginate: 16
