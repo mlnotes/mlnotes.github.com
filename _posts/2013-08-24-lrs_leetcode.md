@@ -10,7 +10,6 @@ keywords: [LeetCode, Algorithm, Palindromic, 回文子串]
 #include <iostream>
 using namespace std;
 
-
 string longestPalindrome(string s)
 {
     // Start typing your C/C++ solution below
@@ -62,7 +61,6 @@ string longestPalindrome(string s)
 
 	return s.substr((maxi-maxlen+1)/2, maxlen-1);
 }
-
 
 int main()
 {
