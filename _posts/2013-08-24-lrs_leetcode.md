@@ -5,7 +5,7 @@ tags: [LeetCode, Algorithm]
 keywords: [LeetCode, Algorithm, Palindromic, 回文子串]
 ---
 
-{% highlight c++ %}
+{% highlight c++ linenos %}
 #include <string>
 #include <iostream>
 using namespace std;
