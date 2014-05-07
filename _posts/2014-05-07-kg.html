@@ -5,102 +5,95 @@ tags: [Summary]
 ---
 <link rel="stylesheet" href="/media/css/js-mindmap.css">
 <style>
-.js-mindmap-active a.node {
-    background:#FF0000;
-    border: 2px solid white;
-    -webkit-border-top-left-radius: 20px;
-    -webkit-border-bottom-right-radius: 20px;
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-bottomright: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;    
-}
-.js-mindmap-active a.node.active {
-    padding:5px 10px !important;
-    border-width:5px !important;
-}
-.js-mindmap-active a.node.activeparent {
-    padding:5px 10px !important;
-    border-width:5px !important;
-    background:#8B0000;
-}
+    .js-mindmap-active a.node {
+        background:#FF0000;
+        border: 2px solid white;
+        -webkit-border-top-left-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        -moz-border-radius-topleft: 20px;
+        -moz-border-radius-bottomright: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;    
+    }
+    .js-mindmap-active a.node.active {
+        padding:5px 10px !important;
+        border-width:5px !important;
+    }
+    .js-mindmap-active a.node.activeparent {
+        padding:5px 10px !important;
+        border-width:5px !important;
+        background:#8B0000;
+    }
 
-#mindmap{
-	width: 600px;
-	height: 600px;
-}
+    #mindmap{
+        width: 600px;
+        height: 600px;
+    }
 </style>
 
 
 <div id="mindmap">
-  <ul>
-    <li><a href="#">计算机</a>
-      <ul>
-        <li><a href="#" target="_blank" class="icon twitter">算法</a>
-			<ul>
-				<li><a href="#">排序</a></li>
-				<li><a href="#">字符串</a></li>
-			</ul>
-		</li>
-        <li><a href="#" target="_blank" class="icon linkedin">数据结构</a>
-			<ul>
-				<li><a href="#">树</a></li>
-				<li><a href="#">堆</a></li>
-				<li><a href="#">图</a></li>
-			</ul>
-		</li>
-        <li><a href="#" target="_blank" class="icon facebook">网络</a>
-			<ul>
-				<li><a href="#">OSI 7层模型</a></li>
-				<li><a href="#">TCP/UDP</a></li>
-				<li><a href="#">路由</a></li>
-			</ul>
-		</li>
-        <li><a href="#" target="_blank" class="icon rss">分布式</a>
-			<ul>
-				<li><a href="#">GFS</a></li>
-				<li><a href="#">架构</a></li>
-				<li><a href="#">CAP</a>
-					<ul>
-						<li><a href="#">一致性</a>
-						<li><a href="#">可用性</a>
-						<li><a href="#">分区容错性</a>
-					</ul>
-				</li>
-			</ul>
-		</li>
-    
-        <li><a href="#">基础</a>
-          <ul>
-          	<li><a href="#" title="View all posts filed under General">语言</a>
-				<ul>
-					<li><a href="#">C</a></li>
-					<li><a href="#">C++</a></li>
-					<li><a href="#">Java</a></li>
-					<li><a href="#">C#</a></li>
-				</ul>
-			</li> 
-          	<li><a href="#">操作系统</a></li> 
-          	<li><a href="#">编译原理</a></li>
-          </ul>
+    <ul>
+        <li><a href="#">Knowledge</a>
+            <ul>
+                <li><a href="#" target="_blank" class="icon twitter">Algorithm</a>
+                    <ul>
+                        <li><a href="#">Sorting</a></li>
+                        <li><a href="#">String</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank" class="icon linkedin">Data Structure</a>
+                    <ul>
+                        <li><a href="#">Tree</a></li>
+                        <li><a href="#">Heap</a></li>
+                        <li><a href="#">Graph</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank" class="icon facebook">Network</a>
+                    <ul>
+                        <li><a href="#">OSI Model</a></li>
+                        <li><a href="#">TCP/UDP</a></li>
+                        <li><a href="#">Routing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" target="_blank" class="icon rss">Distributed</a>
+                    <ul>
+                        <li><a href="#">GFS</a></li>
+                        <li><a href="#">CAP Theorem</a>
+                            <ul>
+                                <li><a href="#">Consistency</a>
+                                <li><a href="#">Availability</a>
+                                <li><a href="#">Partition tolerance</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Language</a>
+                    <ul>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">C#</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Frontend</a>
+                    <ul>
+                        <li><a href="#">HTML</a></li> 
+                        <li><a href="#">CSS</a></li> 
+                        <li><a href="#">Javascript</a></li> 
+                    </ul>
+                </li>
+                <li><a href="#">Backend</a>
+                    <ul>
+                        <li><a href="#">Mysql</a></li>
+                        <li><a href="#">Apache</a></li> 
+                        <li><a href="#">Nginx</a></li>
+                    </ul>
+                </li>
+            </ul>
         </li>
-        <li><a href="#">前端</a>
-          <ul>
-      		<li><a href="#">HTML</a></li> 
-            <li><a href="#">CSS</a></li> 
-            <li><a href="#">Javascript</a></li> 
-          </ul>
-        </li>
-        <li><a href="#">后台</a>
-          <ul>
-            <li><a href="#">mysql</a></li>
-            <li><a href="#">apache</a></li> 
-            <li><a href="#">Nginx</a></li>
-          </ul>
-        </li>
-  		</ul>
-    </li>
-  </ul>
+    </ul>
 </div>
 
 
@@ -110,56 +103,57 @@ tags: [Summary]
 <script type="text/javascript" src="/media/js/js-mindmap.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function () {
-    // enable the mindmap in the body
+    $(document).ready(function() {
+        // enable the mindmap in the body
 
-    var map = $('#mindmap').mindmap({
-        strokeStyle: '#000',
-        centreOffset: 0,
-        minSpeed: 0.1,
-        maxForce: 0.2,
-        mapArea: {
-            x: 600,
-            y: 600
-        }
-    });
+        var map = $('#mindmap').mindmap({
+            strokeStyle: '#000',
+            centreOffset: 0,
+            minSpeed: 0.1,
+            maxForce: 0.2,
+            mapArea: {
+                x: 600,
+                y: 600
+            }
+        });
 
 
-    $('#mindmap>ul>li').hide();
+        $('#mindmap>ul>li').hide();
 
-    // add the data to the mindmap
-    var root = $('#mindmap>ul>li').get(0).mynode = map.addRootNode($('#mindmap>ul>li>a').text(), {
-        href: '/',
-        url: '/',
-        onclick: function (node) {
-            $(node.obj.activeNode.content).each(function () {
-                this.hide();
-            });
-        }
-    });
-
-    var addLI = function () {
-        var parentnode = $(this).parents('li').get(0);
-        if (typeof (parentnode) == 'undefined') parentnode = root;
-        else parentnode = parentnode.mynode;
-
-        this.mynode = map.addNode(parentnode, $('a:eq(0)', this).text(), {
-            href: $('a:eq(0)', this).attr('href'),
-            onclick: function (node) {
-                $(node.obj.activeNode.content).each(function () {
+        // add the data to the mindmap
+        var root = $('#mindmap>ul>li').get(0).mynode = map.addRootNode($('#mindmap>ul>li>a').text(), {
+            href: '/',
+            url: '/',
+            onclick: function(node) {
+                $(node.obj.activeNode.content).each(function() {
                     this.hide();
-                });
-                $(node.content).each(function () {
-                    this.show();
                 });
             }
         });
-        $(this).hide();
-        $('>ul>li', this).each(addLI);
-    };
-    $('#mindmap>ul>li>ul').each(function () {
-        $('>li', this).each(addLI);
-    });
 
-});
+        var addLI = function() {
+            var parentnode = $(this).parents('li').get(0);
+            if (typeof (parentnode) == 'undefined')
+                parentnode = root;
+            else
+                parentnode = parentnode.mynode;
+
+            this.mynode = map.addNode(parentnode, $('a:eq(0)', this).text(), {
+                href: $('a:eq(0)', this).attr('href'),
+                onclick: function(node) {
+                    $(node.obj.activeNode.content).each(function() {
+                        this.hide();
+                    });
+                    $(node.content).each(function() {
+                        this.show();
+                    });
+                }
+            });
+            $(this).hide();
+            $('>ul>li', this).each(addLI);
+        };
+        $('#mindmap>ul>li>ul').each(function() {
+            $('>li', this).each(addLI);
+        });
+    });
 </script>
