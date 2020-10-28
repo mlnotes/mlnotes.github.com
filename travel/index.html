@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+  <title>Travel Map(China)</title>
+  <style>
+    #map {
+      width: 1000px;
+      height: 1000px;
+      margin: auto;
+    }
+  </style>
+  <script type="text/javascript" src="./js/echarts.min.js"></script>
+  <script type="text/javascript" src="./js/data.js"></script>  
+  <script type="text/javascript" src="./js/map/china.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <script>
+    var chart = echarts.init(document.getElementById('map'));
+    function initEcharts(name) {
+      var tmpSeriesData = name === "中国" ? buildProvinceList() : buildCityList(name);
+      var option = {
+        title: {
+          text: name,
+          left: 'center'
+        },
+        visualMap: {
+          min: 0,
+          max: 1,
+          inRange: {
+            color: ["#E0FFFF", "#0063DD"]
+          },
+          show: false
+        },
+        series: [
+          {
+            name: name,
+            type: 'map',
+            mapType: name,
+            roam: false,//是否开启鼠标缩放和平移漫游
+            itemStyle: {//地图区域的多边形 图形样式
+              normal: {//是图形在默认状态下的样式
+                borderColor: "rgba(0, 0, 0, 0.5)",
+                label: {
+                  show: true,//是否显示标签
+                  // textStyle: {
+                  //   color: "rgba(255,255,255,1)"
+                  // }
+                }
+              },
+              emphasis: {//是图形在高亮状态下的样式,比如在鼠标悬浮或者图例联动高亮时
+                areaColor: "#F3B329",
+                shadowOffsetX: 0,
+                shadowOffsetY: 0,
+                shadowBlur: 20,
+                borderWidth: 0,
+                shadowColor: "rgba(0, 0, 0, 0.5)",
+                label: { show: true }
+              }
+            },
+            data: tmpSeriesData,
+            top: "3%"//组件距离容器的距离
+          }
+        ]
+      };
+      chart.setOption(option);
+      chart.off("click");
+
+      if (name === "中国") { // 全国时，添加click 进入省级
+        chart.on('click', function (param) {
+          provinceName = param.name;
+          provinceId = ALL_PROVINCES[provinceName].id;
+          if (provinceId) {
+            location.hash = "#" + provinceId;
+          }
+        });
+      } else { // 省份，添加双击 回退到全国
+        chart.on("dblclick", function () {
+          initEcharts("中国");
+        });
+      }
+    }
+
+    function showProvince(path, name) {
+      loadBdScript('$' + path + 'JS', './js/map/province/' + path + '.js', function () {
+        initEcharts(name);
+        console.log(echarts.getMap(name).geoJson.features.map(f => f.properties.name));
+      });
+    }
+
+    function loadBdScript(scriptId, url, callback) {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      if (script.readyState) {  //IE
+        script.onreadystatechange = function () {
+          if (script.readyState === "loaded" || script.readyState === "complete") {
+            script.onreadystatechange = null;
+            callback();
+          }
+        };
+      } else {
+        script.onload = function () {
+          callback();
+        };
+      }
+      script.src = url;
+      script.id = scriptId;
+      document.getElementsByTagName("head")[0].appendChild(script);
+    };
+
+    function calcProvinceValue(province) {
+      var cities = ALL_PROVINCES[province].cities;
+      var total = Object.keys(cities).length;
+      var visited = Object.keys(cities).map(c => cities[c]).reduce((a, b) => a+b, 0);
+      return Math.sqrt(visited/total);
+    }
+
+    function buildProvinceList() {
+      return Object.keys(ALL_PROVINCES).map(p => ({'name':p, 'value': calcProvinceValue(p), 'id': ALL_PROVINCES[p].id}));
+    }
+
+    function buildCityList(provinceName) {
+      var cities = ALL_PROVINCES[provinceName].cities;
+      return Object.keys(cities).map(c => ({'name': c, 'value': cities[c]}));
+    }
+    
+    function onHashChange() {
+      provinceId = location.hash.substring(1);
+      provinceName = Object.keys(ALL_PROVINCES).filter(p => ALL_PROVINCES[p].id == provinceId)[0];
+      if (provinceName) {
+       showProvince(provinceId, provinceName);
+      } else {
+        initEcharts("中国");
+      }
+    }
+
+    window.addEventListener('hashchange', onHashChange, false);
+    onHashChange();
+  </script>
+</body>
+</html>
