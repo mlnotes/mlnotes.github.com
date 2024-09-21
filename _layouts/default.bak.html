@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
     <title>{{ page.title }} | {{ site.name }}</title>
     
 	{% if page.keywords %}
@@ -24,13 +25,25 @@
         <header>
         <h1>{{ page.title }}</h1>
         </header>
-
+        <nav>
+        <span><a title="home page" class="" href="/">Home</a></span>
+        <span><a title="about" class="" href="/about/">About</a></span>
+        <span><a title="guestbook" class="" href="/guestbook/">Guestbook</a></span>
+        <span><a title="categories" class="" href="/categories/">Categories</a></span>
+        <span><a title="tags" class="" href="/tags/">Tags</a></span>
+        <span><a title="links" class="" href="/links/">Links</a></span>
+        <span><a title="subscribe by RSS" class="" href="/feed.xml">Subscribe</a></span>
+        </nav>
         <article class="content">
         {{ content }}
         </article>
       </div>
 
     <footer>
+        <p><small>
+            <a href="https://github.com/{{site.github}}/{{site.github}}.github.com/edit/master/{{page.path}}" target="_blank" title="Edit Page">Co</a>pyright 2012 - {{site.time | date:"%Y"}} by <a href="/about/">hanfeng</a> | 
+            <a href="https://github.com/{{site.github}}/{{site.github}}.github.com/new/master/_posts" target="_blank" title="New Post">Po</a>wered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> & <a href="http://pages.github.com">GitHub</a> 
+        </small></p>
     </footer>
 
     </div>
